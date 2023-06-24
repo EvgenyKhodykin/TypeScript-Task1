@@ -49,15 +49,14 @@ class WeatherSound {
 
     render(): void {
         this.itemsContainer.append(this.item)
-        this.iconImage.addEventListener('click', () => {
-            this.backgroundContainer.style.backgroundImage = `url(${this.image})`
-            this.volumeControl.addEventListener(
-                'change',
-                (event: any): void => {
-                    this.soundElement.volume = event.target.value / 100
-                }
-            )
+        this.volumeControl.addEventListener('change', (event: any): void => {
+            this.soundElement.volume = event.target.value / 100
         })
+    }
+
+    setBackground(flag: string): void {
+        if (flag === this.label)
+            this.backgroundContainer.style.backgroundImage = `url(${this.image})`
     }
 
     play(flag: string): void {
