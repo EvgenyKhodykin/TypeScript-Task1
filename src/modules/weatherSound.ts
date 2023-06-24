@@ -59,7 +59,7 @@ class WeatherSound {
             this.backgroundContainer.style.backgroundImage = `url(${this.image})`
     }
 
-    play(flag: string): void {
+    playSound(flag: string): void {
         if (flag === this.label && this.isPlaying === false) {
             this.soundElement.play()
             this.isPlaying = true

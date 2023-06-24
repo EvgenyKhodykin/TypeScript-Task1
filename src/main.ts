@@ -28,6 +28,6 @@ soundData.forEach(item => {
     itemsContainer.addEventListener('click', (event: any): void => {
         const clickedItem = event.target.dataset.type
         soundItem.setBackground(clickedItem)
-        soundItem.play(clickedItem)
+        soundItem.playSound(clickedItem)
     })
 })
