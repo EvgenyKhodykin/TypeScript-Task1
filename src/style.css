@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    overflow: hidden;
+}
+
+.background {
+    background-image: url(./assets/images/summer-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+h1 {
+    color: coral;
+    font-size: 60px;
+    text-align: center;
+}
+
+.soundItem {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemsContainer {
+    margin: 0 auto;
+    display: flex;
+    margin-top: 70px;
+    width: 700px;
+    justify-content: space-between;
+}
+
+.iconImage {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.volume-control {
+    margin: 0 auto;
+    display: flex;
+    margin-top: 70px;
+    cursor: pointer;
+}
