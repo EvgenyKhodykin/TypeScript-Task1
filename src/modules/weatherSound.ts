@@ -55,13 +55,13 @@ class WeatherSound {
         })
     }
 
-    setBackground(flag: string): void {
-        if (flag === this.label)
+    setBackground(data: string): void {
+        if (data === this.label)
             this.backgroundContainer.style.backgroundImage = `url(${this.image})`
     }
 
-    playSound(flag: string): void {
-        if (flag === this.label && this.isPlaying === false) {
+    playSound(data: string): void {
+        if (data === this.label && this.isPlaying === false) {
             this.soundElement.play()
             this.isPlaying = true
         } else if (this.isPlaying === true) {
