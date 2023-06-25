@@ -25,9 +25,11 @@ app.append(backgroundContainer, header, itemsContainer, volumeControl)
 soundData.forEach(item => {
     const soundItem = new WeatherSound(item)
     soundItem.render()
-    itemsContainer.addEventListener('click', (event: any): void => {
-        const clickedItem = event.target.dataset.type
-        soundItem.setBackground(clickedItem)
-        soundItem.playSound(clickedItem)
+    itemsContainer.addEventListener('click', (event: Event): void => {
+        const clickedItem = (event.target as HTMLImageElement).dataset.type
+        if (clickedItem) {
+            soundItem.setBackground(clickedItem)
+            soundItem.playSound(clickedItem)
+        }
     })
 })
