@@ -50,8 +50,8 @@ class WeatherSound {
     render(): void {
         this.itemsContainer.append(this.item)
         this.volumeControl.addEventListener('change', (event: Event): void => {
-            this.soundElement.volume =
-                +(event.target as HTMLInputElement).value / 100
+            const value = (event.target as HTMLInputElement).value
+            this.soundElement.volume = Number(value) / 100
         })
     }
 
